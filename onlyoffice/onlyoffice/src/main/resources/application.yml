@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: onlyoffice
+
+server:
+  port: 8089
+
+# MinIO配置
+minio:
+  endpoint: http://10.164.130.137:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket-name: onlyoffice
+  secure: false
+
+# OnlyOffice配置
+onlyoffice:
+  document-server-url: http://10.164.130.137:9631/
+  callback-url: http://10.164.130.137:8089/api/onlyoffice/callback
+  file-url-prefix: http://10.164.130.137:8089/api/onlyoffice/files/
